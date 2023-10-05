@@ -209,6 +209,32 @@ Incorrect Tree:
 9 directories, 22 files
 ```
 
+### Database setup
 
+By default your database is set up in your pollsapi/settings.py file.
 
+It should look like this:
 
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
+If you notices the name of your database it points to the sqlite3 database/ file in your base directory.
+
+The file will be generated when we run the migrate command.
+
+```
+python3 manage.py migrate
+```
+
+You should now see a db.sqlite3 file at the root of your base directory. 
+
+This file cannot be read by vscode but we can access it like any other database by simply running our app once we have everything set up with the following command ( make sure you are in the directory that includes your manage.py file ):
+
+```
+Python3 manage.py runserver
+```
