@@ -24,6 +24,9 @@ mkdir drf_poll_example_api
 
 #### Your tree before you create the virtual environment
 ```
+tree -L 3  
+```
+```
 .
 └── README.md
 
@@ -118,6 +121,93 @@ pytz==2023.3.post1
 sqlparse==0.4.4
 ```
 
+### Start django-admin project
+
+#### Make sure to check your tree
+```
+tree -L 3  
+```
+Correct command:
+```
+django-admin startproject pollsapi .
+```
+Correct Tree:
+```
+.
+├── README.md
+├── env
+│   ├── bin
+│   │   ├── Activate.ps1
+│   │   ├── activate
+│   │   ├── activate.csh
+│   │   ├── activate.fish
+│   │   ├── django-admin
+│   │   ├── pip
+│   │   ├── pip3
+│   │   ├── pip3.10
+│   │   ├── pip3.11
+│   │   ├── python -> python3.11
+│   │   ├── python3 -> python3.11
+│   │   ├── python3.11 -> /Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11
+│   │   └── sqlformat
+│   ├── include
+│   │   └── python3.11
+│   ├── lib
+│   │   └── python3.11
+│   └── pyvenv.cfg
+├── manage.py
+├── pollsapi
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── requirements.txt
+
+8 directories, 22 files
+```
+
+#### NOTE: The actual documentation unfortunately forgets to tell you to include the ' . ' at the end of the command, don't make this mistake or your tree will look like this! You only want one polls_api director, not two nested like this!
+Inorrect command:
+```
+django-admin startproject pollsapi 
+```
+Incorrect Tree:
+```
+.
+├── README.md
+├── env
+│   ├── bin
+│   │   ├── Activate.ps1
+│   │   ├── activate
+│   │   ├── activate.csh
+│   │   ├── activate.fish
+│   │   ├── django-admin
+│   │   ├── pip
+│   │   ├── pip3
+│   │   ├── pip3.10
+│   │   ├── pip3.11
+│   │   ├── python -> python3.11
+│   │   ├── python3 -> python3.11
+│   │   ├── python3.11 -> /Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11
+│   │   └── sqlformat
+│   ├── include
+│   │   └── python3.11
+│   ├── lib
+│   │   └── python3.11
+│   └── pyvenv.cfg
+├── pollsapi
+│   ├── manage.py
+│   └── pollsapi
+│       ├── __init__.py
+│       ├── asgi.py
+│       ├── settings.py
+│       ├── urls.py
+│       └── wsgi.py
+└── requirements.txt
+
+9 directories, 22 files
+```
 
 
 
