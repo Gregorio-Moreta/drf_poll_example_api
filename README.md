@@ -80,7 +80,43 @@ There are a lot of configs to make this approach work properly which isn't worth
 
 Disregard mkvirtualenv when creating the virtual environment for this project and moving forward as well.
 
+### Install Django
 
+Again, make sure you're in your virtual environment before installing dependencies or the process will fail.
+
+```
+pip3 install Django
+```
+This will install Django and subdependencies to your virtual environment
+
+```
+asgiref==3.7.2
+Django==4.2.6
+sqlparse==0.4.4
+```
+```
+pip3 install djangorestframework
+```
+This will install djangorestframework and subdependencies to your virtual environment
+
+```
+djangorestframework==3.14.0
+pytz==2023.3.post1
+```
+
+Don't forget to run your 
+
+```
+pip3 freeze > requirements.txt
+```
+Overall your requirements.txt should look like the following once both are installed.
+```
+asgiref==3.7.2
+Django==4.2.6
+djangorestframework==3.14.0
+pytz==2023.3.post1
+sqlparse==0.4.4
+```
 
 
 
